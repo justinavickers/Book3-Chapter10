@@ -14,14 +14,9 @@ function contactList(parsedContacts) {
     domEntry.innerHTML+=contactContents
   })
 }
-//clearing the Dom each time we load the page
-function clearContacts(){
-  domEntry.innerHTML = ""
-}
-//the function that uses the functions prior to extract information from the JSON.
+// //the function that uses the functions prior to extract information from the JSON.
 //then take that information and turn it into a Div and lastly injecting it into the DOM.
 const contactListToDom = () => {
-  clearContacts()
   APIfunctions.getContacts().then(parsedContacts => contactList(parsedContacts))
 
 }

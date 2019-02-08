@@ -1,4 +1,4 @@
-
+import contactDIV from "./contact"
 import APIfunctions from "./contactCollection"
 function createInformation() {
     //where we are targeting to get the values for the name address and phone number for our
@@ -23,7 +23,10 @@ function createInformation() {
     .then((parsedContacts) => {
         console.log(parsedContacts)
     })
-        })
+})
+const objHTML = contactDIV(obj)
+document.querySelector("#submit").innerHTML += objHTML
+
 }
 //sending out the createInformation function
 export default createInformation
