@@ -1,4 +1,3 @@
-//loads exiting contacts(get all) save new(auto gen id)
 const APIfunctions={
   getContacts(){
    return fetch("http://localhost:3000/contacts")
@@ -12,6 +11,12 @@ const APIfunctions={
           "Content-Type": "application/json"
       },
       body: JSON.stringify(obj)
+    })
+  },
+
+  deleteContacts(id) {
+    return fetch(`http://localhost:3000/contacts/${id}`, {
+      method:"DELETE"
     })
   }
   }

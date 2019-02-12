@@ -1,5 +1,5 @@
 import contactDIV from "./contact"
-import APIfunctions from "./contactCollection"
+import APIfunctions from "./api"
 function createInformation() {
     //where we are targeting to get the values for the name address and phone number for our
     //object to go to the API

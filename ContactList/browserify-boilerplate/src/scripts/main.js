@@ -8,8 +8,11 @@ const submitButton = document.querySelector("#submitButton")
 contactListToDom()
 //displaying contactList to the dom^^
 //import contact list and contact form
-submitButton.addEventListener("click", () => {
+submitButton.addEventListener("click", async () => {
   console.log("You clicked me")
-  createInformation()
+  await createInformation()
+  let domEntry = document.querySelector("#submit")
+ domEntry.innerHTML = ""
+    contactListToDom()
 }
 )
